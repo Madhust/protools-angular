@@ -1,4 +1,4 @@
-name: Build Application
+name: Build the package
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-
+    name: Build the package
     runs-on: ubuntu-latest
 
     strategy:
