@@ -23,5 +23,8 @@
     "url": "https://github.com/Madhust/protools-angular/issues",
     "email": "madhusudhananit@gmail.com"
   },
-  "homepage": "https://github.com/Madhust/protools-angular/blob/main/README.md"
+  "homepage": "https://github.com/Madhust/protools-angular/blob/main/README.md",
+  "publishConfig": {
+    "access": "public"
+  }
 }
