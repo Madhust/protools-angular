@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import {StatelessComponent} from '@protools/angular-decorators';
+import {StatelessComponent} from '@protools/angular';
 
 @Component({
   selector: 'app-state',

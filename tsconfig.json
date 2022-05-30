@@ -3,9 +3,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "@protools/angular-decorators": [
-        "dist/protools/angular-decorators/protools-angular-decorators",
-        "dist/protools/angular-decorators"
+      "@protools/angular": [
+        "dist/protools/angular/protools-angular",
+        "dist/protools/angular"
       ]
     },
     "baseUrl": "./",

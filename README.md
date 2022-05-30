@@ -1,27 +1,61 @@
-# ProtoolsApp
+# Protools Angular Package
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
+`@protools/angular` contains items that provides additional capabilities to your angular application.
 
-## Development server
+## Stateless component decorator
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Stateless component is a hot topic in React and when comes with Angular, all components are statefull by default. You can make your Angular component stateless by preventing it from updating the incoming properties.
 
-## Code scaffolding
+`StatelessComponent` decorator helps you to ensure one and only main rule that make your Angular component stateless.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> "DON'T MUTATE ANY INCOMING PROPERTIES WITHIN THE COMPONENT".
 
-## Build
+`StatelessComponent` decorator ensures stateless of your angular component by simply ensuring below two things.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+* Prevent mutating any property marked with `@Input`.
+* Throws exception when `@Input` property is mutated inside the component.
 
-## Running unit tests
+```typescript
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import {StatelessComponent} from '@protools/angular';
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+@Component({
+  selector: 'app-state',
+  templateUrl: './state.component.html',
+  styleUrls: ['./state.component.scss']
+})
+@StatelessComponent()
+export class StateComponent {
 
-## Running end-to-end tests
+  @Input()
+  public title = '';
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+  counter = 1;
 
-## Further help
+  constructor() { }
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  changeTitle(): void {
+    this.title = `Changed Title from child ${++this.counter}`;
+  }
+
+}
+```
+
+In the `changeTitle` method, the `title` input property is changed but `StatelessComponent` prevent it from doing so by throwing exception/waring.
+
+### Options
+
+`StatelessComponent` decorator accepts below options which provides control over handling statelessness of your component.
+
+| Option | Usage |
+| --- | ----------- |
+| `excludedMethods: string[]` | `StatelessComponent` decorator will disallow modification of input property in any methods other than `constructor` & `ngOnInit`. If you want to exclude any other methods, then it has to be added in this property. |
+| `debug: boolean` | By default, its true. Disabling this option, will throw  console warning when stateless rules are overruled. |
+
+
+
+
+
+
+
+
