@@ -1,11 +1,27 @@
 {
   "name": "@protools/angular",
   "version": "1.0.2",
+  "description": "Protools for Angular",
   "peerDependencies": {
     "@angular/common": "^12.2.0",
     "@angular/core": "^12.2.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
-  }
+  },
+  "author": {
+    "email": "madhusudhananit@gmail.com",
+    "name": "Madhu Sudhanan P",
+    "url": "http://madhust.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Madhust/protools-angular.git"
+  },
+  "keywords": ["angular", "decorators", "protools", "ng", "javascript", "typescript", "stateless-component", "functional-programming"],
+  "bugs": {
+    "url": "https://github.com/Madhust/protools-angular/issues",
+    "email": "madhusudhananit@gmail.com"
+  },
+  "homepage": "https://github.com/Madhust/protools-angular/blob/main/README.md"
 }
