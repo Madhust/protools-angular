@@ -1,7 +1,5 @@
 name: Build the package
-
-env:
-  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}  
+  
 on:
   push:
     branches: [ main ]
@@ -25,8 +23,7 @@ jobs:
       with:
         node-version: '14.x'
         registry-url: 'https://registry.npmjs.org'
-    - run: npm ci
-    - run: npm run-script build:lib
-    - name: Publish package 
-      working-directory: dist/protools/angular
-      run: npm publish
+    - name: Install  
+      run: npm ci
+    - name: Build
+      run: npm run-script build:lib

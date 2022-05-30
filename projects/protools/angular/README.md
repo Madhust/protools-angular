@@ -1,6 +1,6 @@
 # Protools Angular Package
 
-`@protools/angular` contains items that provide additional capabilities to your angular application.
+`@protools/angular` contains decorators, components & various items that provide additional capabilities to your angular application.
 
 ## Stateless component decorator
 
