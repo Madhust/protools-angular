@@ -21,4 +21,4 @@ jobs:
         working-directory: dist/protools/angular
         run: npm publish
         env:
-           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }} 
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}   
