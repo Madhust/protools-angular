@@ -1,6 +1,6 @@
 {
   "name": "protools-app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "ng": "node node_modules/@angular/cli/bin/ng",
     "start": "npm run ng serve",
