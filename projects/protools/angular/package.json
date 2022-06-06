@@ -1,6 +1,6 @@
 {
   "name": "@protools/angular",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Protools for Angular",
   "peerDependencies": {
     "@angular/common": "^14.0.0",
